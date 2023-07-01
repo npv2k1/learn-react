@@ -15,17 +15,19 @@ import LearnUseState from './lessions/learn-use-state';
 
 const App = () => {
   return (
-    <HashRouter>
-      <Routes>
-        <Route path="/">
-          <Route index={true} element={<HomePage />} />
-        </Route>
-        <Route path="/learn">
-          <Route index={true} element={<LessionsPage />} />
-          <Route path="learn-use-state" element={<LearnUseState />} />
-        </Route>
-      </Routes>
-    </HashRouter>
+    <BrowserRouter>
+      <HashRouter basename="/">
+        <Routes>
+          <Route path="/">
+            <Route index={true} element={<HomePage />} />
+          </Route>
+          <Route path="/learn">
+            <Route index={true} element={<LessionsPage />} />
+            <Route path="learn-use-state" element={<LearnUseState />} />
+          </Route>
+        </Routes>
+      </HashRouter>
+    </BrowserRouter>
   );
 };
 
