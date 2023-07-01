@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg';
 import {
   BrowserRouter,
   createBrowserRouter,
+  HashRouter,
   Route,
   RouterProvider,
   Routes,
@@ -14,7 +15,7 @@ import LearnUseState from './lessions/learn-use-state';
 
 const App = () => {
   return (
-    <BrowserRouter basename="/learn-react">
+    <HashRouter>
       <Routes>
         <Route path="/">
           <Route index={true} element={<HomePage />} />
@@ -24,7 +25,7 @@ const App = () => {
           <Route path="learn-use-state" element={<LearnUseState />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
