@@ -8,7 +8,7 @@ import LearnUseState from './lessions/learn-use-state';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/learn-react'>
       <Switch>
         <Route exact path="/" component={HomePage} />
 
