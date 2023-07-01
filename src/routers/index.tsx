@@ -3,6 +3,7 @@ import { Outlet, RouteObject } from 'react-router-dom';
 
 export const routers: RouteObject[] = [
   {
+    
     path: '/',
     element: (
       <div className="flex h-screen w-screen items-center justify-center">

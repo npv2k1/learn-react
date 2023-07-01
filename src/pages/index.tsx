@@ -1,13 +1,13 @@
 import React from 'react';
 import { Outlet } from 'react-router-dom';
 
-const LessionsPage = () => {
+const HomePage = () => {
   return (
     <div>
-      <h1>Lession</h1>
-      <Outlet />
+      HomePage
+      {/* <Outlet /> */}
     </div>
   );
 };
 
-export default LessionsPage;
+export default HomePage;
