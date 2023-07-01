@@ -13,9 +13,8 @@ import LessionsPage from './lessions';
 import LearnUseState from './lessions/learn-use-state';
 
 const App = () => {
-
   return (
-    <BrowserRouter basename='learn-react'>
+    <BrowserRouter basename="/learn-react">
       <Routes>
         <Route path="/">
           <Route index={true} element={<HomePage />} />
