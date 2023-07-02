@@ -1,23 +1,15 @@
-import { lessionsRouters } from '@/lessions';
+import LearnPage, { lessionsRouters } from '@/lessions';
+import HomePage from '@/pages';
 import { Outlet, RouteObject } from 'react-router-dom';
 
 export const routers: RouteObject[] = [
   {
     path: '/',
-    element: (
-      <div className="flex h-screen w-screen items-center justify-center">
-        <h1>Hello, world!</h1>
-        <Outlet />
-      </div>
-    ),
+    element: <HomePage />,
   },
   {
     path: '/learn',
-    element: (
-      <div className="flex h-screen w-screen items-center justify-center">
-        <h1>Hello, hi</h1>
-      </div>
-    ),
+    element: <LearnPage />,
+    children: lessionsRouters,
   },
-  ...lessionsRouters,
 ];

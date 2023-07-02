@@ -1,24 +1,16 @@
+import { useReadme } from '@/hooks/useReadme';
 import React, { useEffect } from 'react';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
 import remarkGfm from 'remark-gfm';
+import LessionDoc from '../components/LessionDoc';
+import { LessionsEnum } from '../configs/constants';
 
 const LearnUseState = () => {
-  const [docs, setDocs] = React.useState<string>('');
-  useEffect(() => {
-    import('./README.md').then((res) => {
-      fetch(res.default as string)
-        .then((response) => response.text())
-        .then((text) => setDocs(text));
-    });
-  }, []);
-
   const [count, setCount] = React.useState<number>(0);
 
   return (
-    <div className="flex h-screen w-screen flex-1 flex-row">
-      <article className="prose overflow-y-scroll p-5 lg:prose-xl">
-        <ReactMarkdown children={docs} remarkPlugins={[remarkGfm]} />
-      </article>
+    <div className="flex h-full min-h-0 flex-1 flex-row bg-gray-200">
+      <LessionDoc lession={LessionsEnum.LEARN_USE_STATE} />
       <div className="flex flex-1">
         <div className="flex flex-1 flex-col items-center justify-center space-y-4">
           <h1 className="font-mono text-3xl text-gray-700">Count: {count}</h1>
