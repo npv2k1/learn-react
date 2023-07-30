@@ -42,4 +42,3 @@ storybook-static
 /playwright/.cache/
 
 /lab
-/docs
