@@ -1,0 +1,25 @@
+{
+  "sbts1": {
+    "prefix": "sbts",
+    "description": "sbts",
+    "scope": "typescriptreact",
+    "body": [
+      "import type { Meta, StoryObj } from '@storybook/react';",
+      "",
+      "const meta: Meta<typeof ${1}> = {",
+      "  title: 'Example/${1}',",
+      "  component: ${1},",
+      "  tags: ['autodocs'],",
+      "};",
+      "",
+      "export default meta;",
+      "type Story = StoryObj<typeof ${1}>;",
+      "",
+      "export const Primary: Story = {",
+      "  args: {",
+      "  },",
+      "};",
+      ""
+    ]
+  }
+}
