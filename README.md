@@ -1,3 +1,2 @@
 # Learn React
 
-Nextjs
