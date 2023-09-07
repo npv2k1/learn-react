@@ -1,4 +1,4 @@
-# Learn useState
+# React`useState` Hook
 `useState` là một hook cơ bản trong react, cho phép bạn sử dụng trạng thái (state) trong các component chức năng (functional component). Trước đây, để sử dụng state, bạn phải dùng các component lớp (class component), nhưng với hook, bạn có thể viết code ngắn gọn và dễ đọc hơn.
 
 Để sử dụng useState, bạn cần nhập nó từ thư viện react:
